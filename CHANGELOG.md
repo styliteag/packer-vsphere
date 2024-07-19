@@ -2,37 +2,20 @@
 
 ## v0.21.0
 
-> Not Released
+> Release Date: Not Released
 
 **Bug Fix**:
 
-- Updates to debian.yml file to remove the disable flag on cloud-init for ubuntu 24.04 LTS version.
+- Updates to `debian.yml` file to remove the disable flag on cloud-init for Ubuntu 24.04 LTS version.
   [#940](https://github.com/vmware-samples/packer-examples-for-vsphere/pull/940)
-- Updates to debian.yml file to fix cloud-init install issue and addtional package issue.
+- Updates to `debian.yml` file to fix cloud-init install issue and additional package issue.
   [#944](https://github.com/vmware-samples/packer-examples-for-vsphere/pull/944)
 
 **Enhancement**:
 
-- Updates Alma Linux removed duplicate variables from example pkr.hcl file and updated variables.pkr.hcl file with defaults.
-  [#944](https://github.com/vmware-samples/packer-examples-for-vsphere/pull/944)
-- Updates Centos Linux removed duplicate variables from example pkr.hcl file and updated variables.pkr.hcl file with defaults.
-  [#944](https://github.com/vmware-samples/packer-examples-for-vsphere/pull/944)
-- Updates Debian Linux removed duplicate variables from example pkr.hcl file and updated variables.pkr.hcl file with defaults.
-  [#944](https://github.com/vmware-samples/packer-examples-for-vsphere/pull/944)
-- Updates Fedora Linux removed duplicate variables from example pkr.hcl file and updated variables.pkr.hcl file with defaults.
-  [#944](https://github.com/vmware-samples/packer-examples-for-vsphere/pull/944)
-- Updates Oracle Linux removed duplicate variables from example pkr.hcl file and updated variables.pkr.hcl file with defaults.
-  [#944](https://github.com/vmware-samples/packer-examples-for-vsphere/pull/944)
-- Updates Photon Linux removed duplicate variables from example pkr.hcl file and updated variables.pkr.hcl file with defaults.
-  [#944](https://github.com/vmware-samples/packer-examples-for-vsphere/pull/944)
-- Updates Red Hat Linux Enterprise removed duplicate variables from example pkr.hcl file and updated variables.pkr.hcl file with defaults.
-  [#944](https://github.com/vmware-samples/packer-examples-for-vsphere/pull/944)
-- Updates Rocky Linux removed duplicate variables from example pkr.hcl file and updated variables.pkr.hcl file with defaults.
-  [#944](https://github.com/vmware-samples/packer-examples-for-vsphere/pull/944)
-- Updates SUSE Linux removed duplicate variables from example pkr.hcl file and updated variables.pkr.hcl file with defaults.
-  [#944](https://github.com/vmware-samples/packer-examples-for-vsphere/pull/944)
-- Updates Ubuntu Linux removed duplicate variables from example pkr.hcl file and updated variables.pkr.hcl file with defaults.
-  [#944](https://github.com/vmware-samples/packer-examples-for-vsphere/pull/944)
+- Updates `pkr.hcl.example` and `variables.pkr.hcl` with defaults.
+  [#944](https://github.com/vmware-samples/packer-examples-for-vsphere/pull/944),
+  [#945](https://github.com/vmware-samples/packer-examples-for-vsphere/pull/945)
 
 **Chore**:
 
