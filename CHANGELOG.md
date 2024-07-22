@@ -19,8 +19,11 @@
 
 **Chore**:
 
-- Removed Red Hat Enterprise Linux 7 release.
+- Removes Red Hat Enterprise Linux 7 from the project.
   [#944](https://github.com/vmware-samples/packer-examples-for-vsphere/pull/944)
+
+  On 30 June 2024, Red Hat Enterprise Linux 7 reached the end of life.
+
 - Updates Rocky Linux 8.9 to 8.10 release.
   [#944](https://github.com/vmware-samples/packer-examples-for-vsphere/pull/944)
 
