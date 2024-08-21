@@ -10,6 +10,9 @@
   [#940](https://github.com/vmware-samples/packer-examples-for-vsphere/pull/940)
 - Updates to `debian.yml` file to fix cloud-init install issue and additional package issue.
   [#944](https://github.com/vmware-samples/packer-examples-for-vsphere/pull/944)
+- Fixes issue when using `http` data source with a static IP address and the kickstart file could not
+  be sent from Packer host.
+  [#959](https://github.com/vmware-samples/packer-examples-for-vsphere/pull/959)
 
 **Enhancement**:
 
