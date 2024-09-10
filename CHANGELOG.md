@@ -30,6 +30,24 @@
 - Updates Rocky Linux 8.9 to 8.10 release.
   [#944](https://github.com/vmware-samples/packer-examples-for-vsphere/pull/944)
 
+- Updates `required_versions` for `packer` to `>= 1.11.0`.
+  [#960](https://github.com/vmware-samples/packer-examples-for-vsphere/pull/960)
+- Updates `required_plugins` for `packer-plugin-vsphere` to `>= 1.4.0`.
+  [#960](https://github.com/vmware-samples/packer-examples-for-vsphere/pull/960)
+- Updates `required_versions` for `terraform` to `>= 1.9.5`.
+  [#960](https://github.com/vmware-samples/packer-examples-for-vsphere/pull/960)
+- Updates `required_versions` for `terraform-provider-vsphere` to `>= 2.8.3`.
+  [#960](https://github.com/vmware-samples/packer-examples-for-vsphere/pull/960)
+- Updates `required_versions` for `hashicorp/hcp` to `>= 0.95.0`.
+  [#960](https://github.com/vmware-samples/packer-examples-for-vsphere/pull/960)
+- Updates `required_versions` for  `packer-plugin-ansible` to >= `1.1.1`.
+  [#960](https://github.com/vmware-samples/packer-examples-for-vsphere/pull/960)
+- Removes Centos Linux 7 from the project.
+  [#960](https://github.com/vmware-samples/packer-examples-for-vsphere/pull/960)
+- Updates Debian Linux 12.5 to 12.6 release.
+  [#960](https://github.com/vmware-samples/packer-examples-for-vsphere/pull/960)
+
+
 ## v0.20.0
 
 > Release Date: 2024-05-29
@@ -161,7 +179,7 @@
 
 **Chore**:
 
-- Updates `required_versions` for `packer` to `>= 1.10.0`.
+- Updates `required_versions` for `packer` to `>= 1.11.0`.
   [#828](https://github.com/vmware-samples/packer-examples-for-vsphere/pull/828)
 - Updates `required_plugins` for `packer-plugin-vsphere` to `>= 1.2.7`.
   [#824](https://github.com/vmware-samples/packer-examples-for-vsphere/pull/824),

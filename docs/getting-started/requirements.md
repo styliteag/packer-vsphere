@@ -31,9 +31,9 @@ The project is tested on the following operating systems for the Packer host [^1
 
 | Component                                                        | Version   | Description      | Resources                                                                                                               |
 | :--------------------------------------------------------------- | :-------- | :--------------- | :---------------------------------------------------------------------------------------------------------------------- |
-| :simple-packer: &nbsp;&nbsp; Packer                              | >= 1.10.0 |  By HashiCorp    | [:fontawesome-brands-github:][packer-repo] &nbsp;&nbsp; [:material-library:][packer]                                    |
-| :simple-hashicorp: &nbsp;&nbsp; Packer Plugin for Ansible        | >= 1.1.0  | By HashiCorp     | [:fontawesome-brands-github:][packer-plugin-ansible-repo] &nbsp;&nbsp; [:material-library:][packer-plugin-ansible]      |
-| :simple-hashicorp: &nbsp;&nbsp; Packer Plugin for VMware vSphere | >= 1.3.0  | By HashiCorp     | [:fontawesome-brands-github:][packer-plugin-vsphere-repo] &nbsp;&nbsp; [:material-library:][packer-plugin-vsphere-docs] |
+| :simple-packer: &nbsp;&nbsp; Packer                              | >= 1.11.0 |  By HashiCorp    | [:fontawesome-brands-github:][packer-repo] &nbsp;&nbsp; [:material-library:][packer]                                    |
+| :simple-hashicorp: &nbsp;&nbsp; Packer Plugin for Ansible        | >= 1.1.1  | By HashiCorp     | [:fontawesome-brands-github:][packer-plugin-ansible-repo] &nbsp;&nbsp; [:material-library:][packer-plugin-ansible]      |
+| :simple-hashicorp: &nbsp;&nbsp; Packer Plugin for VMware vSphere | >= 1.4.0  | By HashiCorp     | [:fontawesome-brands-github:][packer-plugin-vsphere-repo] &nbsp;&nbsp; [:material-library:][packer-plugin-vsphere-docs] |
 | :fontawesome-brands-git: &nbsp;&nbsp; Packer Plugin for Git      | >= 0.6.2  | Community Plugin | [:fontawesome-brands-github:][packer-plugin-git-repo] &nbsp;&nbsp; [:material-library:][packer-plugin-git-docs]         |
 
 ### Installation
@@ -43,7 +43,7 @@ The project is tested on the following operating systems for the Packer host [^1
     You can install Packer on VMware Photon OS using the following commands:
 
     ```shell
-    export PACKER_VERSION="1.10.0"
+    export PACKER_VERSION="1.11.0"
     export OS_PACKAGES="wget unzip"
 
     tdnf install ${OS_PACKAGES} -y
@@ -107,7 +107,7 @@ The following additional software packages must be installed on the operating sy
 | :fontawesome-brands-git: &nbsp;&nbsp; git              | >= 2.45.0   | Version control system for tracking changes        | [:material-library:][git]       |
 | :material-code-braces: &nbsp;&nbsp; gomplate           | >= 3.11.7   | Template renderer                                  | [:material-library:][gomplate]  |
 | :simple-json: &nbsp;&nbsp; jq                          | >= 1.8.3    | Command-line JSON parser                           | [:material-library:][jq]        |
-| :simple-terraform: &nbsp;&nbsp; terraform              | >= 1.8.3    | Infrastructure as Code (IaC) tool by HashiCorp     | [:material-library:][terraform] |
+| :simple-terraform: &nbsp;&nbsp; terraform              | >= 1.9.5    | Infrastructure as Code (IaC) tool by HashiCorp     | [:material-library:][terraform] |
 | :fontawesome-solid-compact-disc: &nbsp;&nbsp; xorriso  | >= 1.5.6    | ISO filesystem images creator for Linux            | [:material-library:][xorriso]   |
 
 ### Installation
@@ -126,7 +126,7 @@ The following additional software packages must be installed on the operating sy
     Terraform:
 
     ```shell
-    export TERRAFORM_VERSION="1.8.3"
+    export TERRAFORM_VERSION="1.9.5"
     wget -q https://releases.hashicorp.com/terraform/${TERRAFORM_VERSION}/terraform_${TERRAFORM_VERSION}_linux_amd64.zip
     unzip -o -d /usr/local/bin/ terraform_${TERRAFORM_VERSION}_linux_${LINUX_ARCH}.zip
     ```

@@ -46,9 +46,9 @@
                                 "architectures": [
                                     {
                                         "architecture": "amd64",
-                                        "download_link": "https://gemmei.ftp.acc.umu.se/mirror/cdimage/release/12.5.0/amd64/iso-cd/debian-12.5.0-amd64-netinst.iso",
+                                        "download_link": "https://mirror.cogentco.com/debian-cd/12.7.0/amd64/iso-cd/debian-12.7.0-amd64-netinst.iso",
                                         "checksum_algorithm": "sha256",
-                                        "checksum": "https://gemmei.ftp.acc.umu.se/mirror/cdimage/release/12.5.0/amd64/iso-cd/SHA256SUMS"
+                                        "checksum": "https://mirror.cogentco.com/debian-cd/12.7.0/amd64/iso-cd/SHA256SUMS"
                                     }
                                 ],
                                 "build_files": [
@@ -440,31 +440,6 @@
                                         "download_link": "https://mirror.stream.centos.org/9-stream/BaseOS/x86_64/iso/CentOS-Stream-9-latest-x86_64-dvd1.iso",
                                         "checksum_algorithm": "sha256",
                                         "checksum": "https://mirror.stream.centos.org/9-stream/BaseOS/x86_64/iso/CentOS-Stream-9-latest-x86_64-dvd1.iso.SHA256SUM"
-                                    }
-                                ],
-                                "build_files": [
-                                    {
-                                        "vsphere": "vsphere.pkrvars.hcl",
-                                        "build": "build.pkrvars.hcl",
-                                        "ansible": "ansible.pkrvars.hcl",
-                                        "proxy": "proxy.pkrvars.hcl",
-                                        "common": "common.pkrvars.hcl",
-                                        "network": "network.pkrvars.hcl",
-                                        "storage": "linux-storage.pkrvars.hcl"
-                                    }
-                                ]
-                            }
-                        ],
-                        "7": [
-                            {
-                                "version": "7",
-                                "enabled": "true",
-                                "architectures": [
-                                    {
-                                        "architecture": "amd64",
-                                        "download_link": "https://mirror.rackspace.com/CentOS/7.9.2009/isos/x86_64/CentOS-7-x86_64-DVD-2009.iso",
-                                        "checksum_algorithm": "sha256",
-                                        "checksum": "https://mirror.rackspace.com/CentOS/7.9.2009/isos/x86_64/sha256sum.txt"
                                     }
                                 ],
                                 "build_files": [
@@ -889,7 +864,7 @@
                     "documentation": "https://developer.hashicorp.com/packer/docs"
                 }
             },
-            "version_requirement": ">= 1.10.0"
+            "version_requirement": ">= 1.11.0"
         },
         {
             "name": "terraform",
@@ -903,7 +878,7 @@
                     "documentation": "https://developer.hashicorp.com/terraform/docs"
                 }
             },
-            "version_requirement": ">= 1.8.3"
+            "version_requirement": ">= 1.9.5"
         },
         {
             "name": "gomplate",
