@@ -46,7 +46,12 @@
   [#960](https://github.com/vmware-samples/packer-examples-for-vsphere/pull/960)
 - Updates Debian Linux 12.5 to 12.6 release.
   [#960](https://github.com/vmware-samples/packer-examples-for-vsphere/pull/960)
-
+- Updates Ubuntu 22.04 LTS to 22.04.1 LTS.
+  [#965](https://github.com/vmware-samples/packer-examples-for-vsphere/pull/965)
+- Updates AlmaLinux Build pkr.hcl file change version from 8.9 to 8.10
+  [#965](https://github.com/vmware-samples/packer-examples-for-vsphere/pull/965)
+- Updates Oracle Linux Build pkr.hcl file change version from 8.9 to 8.10
+  [#965](https://github.com/vmware-samples/packer-examples-for-vsphere/pull/965)
 
 ## v0.20.0
 

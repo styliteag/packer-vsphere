@@ -22,6 +22,11 @@
                 "name": "Ryan Johnson",
                 "organization": "VMware by Broadcom",
                 "github": "tenthirtyam"
+            },
+            {
+                "name": "Jared Burns",
+                "organization": "VMware by Broadcom",
+                "github": "burnsjared0415"
             }
         ]
     },
@@ -107,9 +112,9 @@
                                 "architectures": [
                                     {
                                         "architecture": "amd64",
-                                        "download_link": "https://releases.ubuntu.com/releases/24.04/ubuntu-24.04-live-server-amd64.iso",
+                                        "download_link": "https://releases.ubuntu.com/releases/24.04.1/ubuntu-24.04.1-live-server-amd64.iso",
                                         "checksum_algorithm": "sha256",
-                                        "checksum": "https://releases.ubuntu.com/releases/24.04/SHA256SUMS"
+                                        "checksum": "https://releases.ubuntu.com/releases/24.04.1/SHA256SUMS"
                                     }
                                 ],
                                 "build_files": [
