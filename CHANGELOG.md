@@ -27,6 +27,26 @@
   [#984](https://github.com/vmware-samples/packer-examples-for-vsphere/pull/984)
 - Updates Fedora Server to release 41.
   [#984](https://github.com/vmware-samples/packer-examples-for-vsphere/pull/984)
+- Updates `required_versions` for `packer` to `>= 1.11.2`.
+  [#986](https://github.com/vmware-samples/packer-examples-for-vsphere/pull/986)
+- Updates `required_plugins` for `packer-plugin-vsphere` to `>= 1.4.2`.
+  [#986](https://github.com/vmware-samples/packer-examples-for-vsphere/pull/986)
+- Updates `required_versions` for `packer-plugin-ansible` to >= `1.1.2`.
+  [#986](https://github.com/vmware-samples/packer-examples-for-vsphere/pull/986)
+- Updates `required_plugins` for `ethanmdavidson/packer-plugin-git` to `>= 0.6.2`.
+  [#717](https://github.com/vmware-samples/packer-examples-for-vsphere/pull/717)
+- Updates `required_versions` for `terraform` to `>= 1.10.0`.
+  [#986](https://github.com/vmware-samples/packer-examples-for-vsphere/pull/986)
+- Updates `required_versions` for `hashicorp/vsphere` to `>= 2.10.0`.
+  [#986](https://github.com/vmware-samples/packer-examples-for-vsphere/pull/986)
+- Updates `required_versions` for `hashicorp/hcp` to `>= 0.100.0`.
+  [#986](https://github.com/vmware-samples/packer-examples-for-vsphere/pull/986)
+- Update ansible-core to `>= 2.18.0`.
+  [#986](https://github.com/vmware-samples/packer-examples-for-vsphere/pull/986)
+- Updates git to `>= 2.47.1`.
+  [#986](https://github.com/vmware-samples/packer-examples-for-vsphere/pull/986)
+- Updates Gomplate to `>= 4.2.0`.
+  [#986](https://github.com/vmware-samples/packer-examples-for-vsphere/pull/986)
 
 ## v0.21.0
 
