@@ -19,11 +19,11 @@ packer {
     }
     git = {
       source  = "github.com/ethanmdavidson/git"
-      version = ">= 0.6.2"
+      version = ">= 0.6.3"
     }
     ansible = {
       source  = "github.com/hashicorp/ansible"
-      version = ">= 1.1.1"
+      version = ">= 1.1.2"
     }
   }
 }
