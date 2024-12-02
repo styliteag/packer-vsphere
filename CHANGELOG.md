@@ -4,6 +4,11 @@
 
 > Release Date: Not Released
 
+**Bug Fix**:
+
+- Reestablished an empty `GRUB_CMDLINE_LINUX_DEFAULT` as `late_command` for Ubuntu.
+  [#982](https://github.com/vmware-samples/packer-examples-for-vsphere/pull/982)
+
 **Chore**:
 
 - Updates Debian Linux 12 to 12.8 release.
