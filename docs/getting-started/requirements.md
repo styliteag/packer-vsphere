@@ -101,14 +101,14 @@ executable `/usr/local/bin` or `$HOME/.packer.d/plugins`.
 
 The following additional software packages must be installed on the operating system running Packer.
 
-| Package                                                | Version     | Description                                        | Resources                       |
-| :----------------------------------------------------- | :---------- | :------------------------------------------------- | :------------------------------ |
-| :simple-ansible: &nbsp;&nbsp; ansible-core             | >= 2.16     | Automation engine for IT infrastructure            | [:material-library:][ansible]   |
-| :fontawesome-brands-git: &nbsp;&nbsp; git              | >= 2.45.0   | Version control system for tracking changes        | [:material-library:][git]       |
-| :material-code-braces: &nbsp;&nbsp; gomplate           | >= 4.2.0   | Template renderer                                  | [:material-library:][gomplate]  |
-| :simple-json: &nbsp;&nbsp; jq                          | >= 1.8.3    | Command-line JSON parser                           | [:material-library:][jq]        |
-| :simple-terraform: &nbsp;&nbsp; terraform              | >= 1.10.0    | Infrastructure as Code (IaC) tool by HashiCorp     | [:material-library:][terraform] |
-| :fontawesome-solid-compact-disc: &nbsp;&nbsp; xorriso  | >= 1.5.6    | ISO filesystem images creator for Linux            | [:material-library:][xorriso]   |
+| Package                                                | Version   | Description                                        | Resources                       |
+| :----------------------------------------------------- |:----------| :------------------------------------------------- | :------------------------------ |
+| :simple-ansible: &nbsp;&nbsp; ansible-core             | >= 2.16   | Automation engine for IT infrastructure            | [:material-library:][ansible]   |
+| :fontawesome-brands-git: &nbsp;&nbsp; git              | >= 2.43.0 | Version control system for tracking changes        | [:material-library:][git]       |
+| :material-code-braces: &nbsp;&nbsp; gomplate           | >= 4.2.0  | Template renderer                                  | [:material-library:][gomplate]  |
+| :simple-json: &nbsp;&nbsp; jq                          | >= 1.8.3  | Command-line JSON parser                           | [:material-library:][jq]        |
+| :simple-terraform: &nbsp;&nbsp; terraform              | >= 1.10.0 | Infrastructure as Code (IaC) tool by HashiCorp     | [:material-library:][terraform] |
+| :fontawesome-solid-compact-disc: &nbsp;&nbsp; xorriso  | >= 1.5.6  | ISO filesystem images creator for Linux            | [:material-library:][xorriso]   |
 
 ### Installation
 

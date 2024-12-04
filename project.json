@@ -906,7 +906,7 @@
                 "name": "Red Hat",
                 "url": "https://redhat.com"
             },
-            "version_requirement": ">= 2.18.0"
+            "version_requirement": ">= 2.16.0"
         },
         {
             "name": "git",
@@ -915,7 +915,7 @@
                 "name": "git",
                 "url": "https://git-scm.com/"
             },
-            "version_requirement": ">= 2.47.1"
+            "version_requirement": ">= 2.43.0"
         }
     ]
 }

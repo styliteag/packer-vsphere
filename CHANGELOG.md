@@ -46,10 +46,6 @@
   [#986](https://github.com/vmware-samples/packer-examples-for-vsphere/pull/986)
 - Updates `required_versions` for `hashicorp/hcp` to `>= 0.100.0`.
   [#986](https://github.com/vmware-samples/packer-examples-for-vsphere/pull/986)
-- Update ansible-core to `>= 2.18.0`.
-  [#986](https://github.com/vmware-samples/packer-examples-for-vsphere/pull/986)
-- Updates git to `>= 2.47.1`.
-  [#986](https://github.com/vmware-samples/packer-examples-for-vsphere/pull/986)
 - Updates Gomplate to `>= 4.2.0`.
   [#986](https://github.com/vmware-samples/packer-examples-for-vsphere/pull/986)
 
