@@ -59,6 +59,10 @@ iso/
 ## Ignore manifests directory.
 manifests/*.json
 
+# JetBrains
+## Ignore idea directory.
+.idea/
+
 # Trunk.io
 ## Ignore trunk directory.
 .trunk/actions

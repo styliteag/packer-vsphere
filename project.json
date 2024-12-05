@@ -428,7 +428,7 @@
                 },
                 {
                     "name": "centos",
-                    "description": "CentOS",
+                    "description": "CentOS Stream",
                     "enabled": "true",
                     "publisher": {
                         "name": "CentOS",

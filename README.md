@@ -1,6 +1,7 @@
 <!--
-Copyright 2023-2024 Broadcom. All rights reserved.
-SPDX-License-Identifier: BSD-2
+© Broadcom. All Rights Reserved.
+The term “Broadcom” refers to Broadcom Inc. and/or its subsidiaries.
+SPDX-License-Identifier: BSD-2-Clause
 -->
 
 <!-- markdownlint-disable first-line-h1 no-inline-html -->
@@ -83,7 +84,9 @@ You can also start a discussion on the [discussions][gh-discussions] area to ask
 
 ## License
 
-Copyright 2023-2024 Broadcom. All rights reserved.
+© Broadcom. All Rights Reserved. The term “Broadcom” refers to Broadcom Inc. and/or its subsidiaries.
+
+Available under the Simplified BSD License.
 
 Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
 
