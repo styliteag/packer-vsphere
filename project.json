@@ -435,16 +435,16 @@
                         "url": "https://centos.org"
                     },
                     "versions": {
-                        "9": [
+                        "10": [
                             {
-                                "version": "9",
+                                "version": "10",
                                 "enabled": "true",
                                 "architectures": [
                                     {
                                         "architecture": "amd64",
-                                        "download_link": "https://mirror.stream.centos.org/9-stream/BaseOS/x86_64/iso/CentOS-Stream-9-latest-x86_64-dvd1.iso",
+                                        "download_link": "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/iso/CentOS-Stream-10-latest-x86_64-dvd1.iso",
                                         "checksum_algorithm": "sha256",
-                                        "checksum": "https://mirror.stream.centos.org/9-stream/BaseOS/x86_64/iso/CentOS-Stream-9-latest-x86_64-dvd1.iso.SHA256SUM"
+                                        "checksum": "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/iso/CentOS-Stream-10-latest-x86_64-dvd1.iso.SHA256SUM"
                                     }
                                 ],
                                 "build_files": [
@@ -459,7 +459,32 @@
                                     }
                                 ]
                             }
-                        ]
+                        ],
+                        "9": [
+                            {
+                                                        "version": "9",
+                                                        "enabled": "true",
+                                                        "architectures": [
+                                                            {
+                                                                "architecture": "amd64",
+                                                                "download_link": "https://mirror.stream.centos.org/9-stream/BaseOS/x86_64/iso/CentOS-Stream-9-latest-x86_64-dvd1.iso",
+                                                                "checksum_algorithm": "sha256",
+                                                                "checksum": "https://mirror.stream.centos.org/9-stream/BaseOS/x86_64/iso/CentOS-Stream-9-latest-x86_64-dvd1.iso.SHA256SUM"
+                                                            }
+                                                        ],
+                                                        "build_files": [
+                                                            {
+                                                                "vsphere": "vsphere.pkrvars.hcl",
+                                                                "build": "build.pkrvars.hcl",
+                                                                "ansible": "ansible.pkrvars.hcl",
+                                                                "proxy": "proxy.pkrvars.hcl",
+                                                                "common": "common.pkrvars.hcl",
+                                                                "network": "network.pkrvars.hcl",
+                                                                "storage": "linux-storage.pkrvars.hcl"
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
                     }
                 },
                 {

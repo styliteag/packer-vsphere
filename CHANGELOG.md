@@ -13,6 +13,8 @@
 
 - Adds confirmation before overwriting existing configuration files.
   [#987](https://github.com/vmware-samples/packer-examples-for-vsphere/pull/987)
+- Adds CentOS Stream 10 to project.
+  [#989](https://github.com/vmware-samples/packer-examples-for-vsphere/pull/989)
 
 **Chore**:
 
