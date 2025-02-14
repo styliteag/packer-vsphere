@@ -1,0 +1,25 @@
+network:
+  version: 2
+  ethernets:
+    eth0:
+      dhcp4: yes
+      dhcp6: no
+      optional: true
+      accept-ra: yes
+      #addresses:
+      #  - 213.183.76.8/24
+      #  - "2a02:24d8:71:f213::8/64"
+      #   - "fdfd:10:40:71a::fa01:11/64"
+      #  - 213.183.76.11/24
+      #  - "2a02:24d8:7:1a::fa01:11/64"
+      #gateway4: 213.183.76.1
+      #gateway6: "2a02:24d8:71:f213::1"
+      #routes:
+      #  - to: 10.30.4.0/22
+      #    via: 10.40.4.1
+      #nameservers:
+      #  addresses:
+      #    - 1.1.1.1
+      #    - 9.9.9.9
+      #    - "2620:fe::fe"
+      #  - "2a02:24d8:71:4506::1"

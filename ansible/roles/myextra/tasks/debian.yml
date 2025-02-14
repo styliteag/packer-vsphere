@@ -1,0 +1,209 @@
+---
+# Debian or derivative specific tasks.
+
+# Tasks for updating the operating system and installing additional packages.
+
+- name: Extra Updates for Debian and ubuntu
+  block:
+    - name: Set Keyboard to German
+      # noqa: no-changed-when
+      ansible.builtin.shell:
+        cmd: |
+          # Does not work on ubuntu 20.04 +
+          localectl set-keymap de nodeadkeys || true
+          # Set Keyboard to German
+          sed -i 's/^XKBLAYOUT=.*/XKBLAYOUT="de"/' /etc/default/keyboard
+          sed -i 's/^XKBVARIANT=.*/XKBVARIANTS="nodeadkeys"/' /etc/default/keyboard
+          systemctl restart keyboard-setup
+          setupcon
+          # Set Timezone to Europe/Berlin
+          timedatectl set-timezone Europe/Berlin
+
+    - name: Check if netplan directory exists
+      ansible.builtin.stat:
+        path: /etc/netplan
+      register: netplan_dir
+
+    - name: Copy 01-netcfg.yaml if /etc/netplan directory exists
+      ansible.builtin.copy:
+        src: files/01-netcfg.yaml
+        dest: /etc/netplan/01-netcfg.yaml
+        owner: root
+        group: root
+        mode: '0644'
+      when: netplan_dir.stat.exists
+
+    - name: Check if cloud-init config exists
+      ansible.builtin.stat:
+        path: /etc/netplan/50-cloud-init.yaml
+      register: cloud_init_config
+
+    - name: Remove 50-cloud-init.yaml if it exists
+      ansible.builtin.file:
+        path: /etc/netplan/50-cloud-init.yaml
+        state: absent
+      when: cloud_init_config.stat.exists
+
+    - name: Check if network interfaces file exists
+      ansible.builtin.stat:
+        path: /etc/network/interfaces
+      register: network_interfaces
+
+    - name: Do echo "pre-up sleep 2" >> /etc/network/interfaces
+      ansible.builtin.lineinfile:
+        path: /etc/network/interfaces
+        line: 'pre-up sleep 2'
+        state: present
+        owner: root
+        group: root
+        mode: '0644'
+      when: network_interfaces.stat.exists
+
+    - name: Disable Predictable Network Interface names and use eth0
+      # noqa: no-changed-when
+      ansible.builtin.shell:
+        cmd: |
+          [ -e /etc/netplan/*.yaml ]     && sed -i 's/en[[:alnum:]]*/eth0/g' /etc/netplan/*.yaml
+          [ -e /etc/network/interfaces ] && sed -i 's/en[[:alnum:]]*/eth0/g' /etc/network/interfaces
+          sed -i 's/GRUB_CMDLINE_LINUX="\(.*\)"/GRUB_CMDLINE_LINUX="net.ifnames=0 biosdevname=0 \1"/g' /etc/default/grub
+          update-grub
+
+    - name: Copy resize-root.sh script via ansible
+      ansible.builtin.copy:
+        src: "files/resize-root.sh"
+        dest: /root/resize-root.sh
+        owner: root
+        group: root
+        mode: '0755'
+
+    - name: Run resize-root.sh script on reboot
+      ansible.builtin.lineinfile:
+        path: /etc/rc.local
+        line: 'test -x /root/resize-root.sh && /root/resize-root.sh &'
+        insertbefore: 'exit 0'
+        create: true
+        mode: '0755'
+
+    - name: Make sure the directory /root/.ssh exists
+      ansible.builtin.file:
+        state: directory
+        dest: /root/.ssh
+        owner: root
+        group: root
+        mode: '0700'
+
+
+    - name: Copy authorized_keys via ansible
+      ansible.builtin.copy:
+        src: "files/authorized_keys"
+        dest: /root/.ssh/authorized_keys
+        owner: root
+        group: root
+        mode: '0600'
+
+    - name: Disable empty password login
+      ansible.builtin.lineinfile:
+        path: /etc/ssh/sshd_config
+        regexp: '^\s*#?\s*PermitEmptyPasswords\s+'
+        line: 'PermitEmptyPasswords no'
+        state: present
+    - name: Disable empty password login
+      ansible.builtin.lineinfile:
+        path: /etc/ssh/sshd_config
+        regexp: '^\s*#?\s*PasswordAuthentication\s+'
+        line: 'PasswordAuthentication no'
+        state: present
+    - name: Disable PAM
+      ansible.builtin.lineinfile:
+        path: /etc/ssh/sshd_config
+        regexp: '^\s*#?\s*UsePAM\s+'
+        line: 'UsePAM no'
+        state: present
+
+
+    - name: Remove packages with ansible
+      ansible.builtin.apt:
+        # noqa: no-changed-when
+        state: absent
+        purge: true
+        autoremove: true
+        name:
+          - nfs-common
+          - rpcbind
+          - popularity-contest
+          - installation-report
+          - landscape-common
+          - wireless-tools
+          - linux-source*
+          - cifs-utils
+          - snapd
+          - geoip-database
+          - cloud-init
+          - cloud-utils
+          - cloud-initramfs-growroot
+          - libssl-dev
+          - libreadline-dev
+          - zlib1g-dev
+          - dkms
+          - perl
+          - ubuntu-advantage-tools
+          - ppp
+          - pppconfig
+          - pppoeconf
+
+    - name: Remove more things
+      ansible.builtin.shell:
+        cmd: |
+          apt-get -y autoremove
+          apt-get -y clean
+
+          echo "remove /usr/share/doc/"
+          rm -rf /usr/share/doc/*
+
+          echo "remove /var/cache"
+          find /var/cache -type f -exec rm -rf {} \;
+
+          echo "truncate any logs that have built up during the install"
+          find /var/log -type f -exec truncate --size=0 {} \;
+
+          echo "blank netplan machine-id (DUID) so machines get unique ID generated on boot"
+          truncate -s 0 /etc/machine-id || true
+
+          echo "remove the contents of /tmp and /var/tmp"
+          rm -rf /tmp/* /var/tmp/* || true
+
+          echo "force a new random seed to be generated"
+          rm -f /var/lib/systemd/random-seed
+
+          echo "clear the history so our install isn't there"
+          rm -f /root/.wget-hsts
+          export HISTSIZE=0
+
+          # Set password for root user
+          echo "Set password for root user"
+          # FIXME: Use password hash instead of plain text
+          # Use from packer config
+          echo "root:password" | chpasswd
+
+          echo "Remove sshd ssh_host_keys"
+          rm /etc/ssh/ssh_host_* || true
+
+    - name: Create delayed user removal script
+      # noqa: no-changed-when
+      ansible.builtin.copy:
+        dest: /root/remove-users.sh
+        mode: '0755'
+        content: |
+          #!/bin/bash
+          userdel -r packer
+          userdel -r ansible
+          rm -- "$0"  # Self delete this script
+
+    - name: Add script to run on next boot
+      # noqa: no-changed-when
+      ansible.builtin.lineinfile:
+        path: /etc/rc.local
+        line: 'test -x /root/remove-users.sh && /root/remove-users.sh &'
+        insertbefore: 'exit 0'
+        create: true
+        mode: '0755'
